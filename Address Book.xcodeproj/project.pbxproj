@@ -131,6 +131,7 @@
 		59044973146299FA00424CB1 /* Address Book */ = {
 			isa = PBXGroup;
 			children = (
+				5904497F146299FA00424CB1 /* MainStoryboard.storyboard */,
 				5904497C146299FA00424CB1 /* AppDelegate.h */,
 				5904497D146299FA00424CB1 /* AppDelegate.m */,
 				59044985146299FA00424CB1 /* MasterViewController.h */,
@@ -139,6 +140,7 @@
 				59044989146299FA00424CB1 /* DetailViewController.m */,
 				590449B314629D2300424CB1 /* EditorViewController.h */,
 				590449B414629D2300424CB1 /* EditorViewController.m */,
+				590449B514629D2300424CB1 /* EditorViewController.xib */,
 				59044974146299FA00424CB1 /* Supporting Files */,
 			);
 			path = "Address Book";
@@ -147,8 +149,6 @@
 		59044974146299FA00424CB1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5904497F146299FA00424CB1 /* MainStoryboard.storyboard */,
-				590449B514629D2300424CB1 /* EditorViewController.xib */,
 				59044975146299FA00424CB1 /* Address Book-Info.plist */,
 				59044976146299FA00424CB1 /* InfoPlist.strings */,
 				59044979146299FA00424CB1 /* main.m */,
