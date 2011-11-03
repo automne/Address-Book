@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 
 #import <CoreData/CoreData.h>
+#import "EditorViewController.h"
 
 @interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
-
+{
+    EditorViewController *editorView;
+}
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
+-(void)saveInfo;
 @end

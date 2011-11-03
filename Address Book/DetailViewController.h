@@ -9,9 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
+{
+    IBOutlet UILabel *detailNameLabel;
+    IBOutlet UILabel *detailPhoneLabel;
+    IBOutlet UILabel *detailAddressLabel;
+}
 
 @property (strong, nonatomic) id detailItem;
-
-@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (nonatomic, retain) IBOutlet UILabel *detailNameLabel;
+@property (nonatomic, retain) IBOutlet UILabel *detailPhoneLabel;
+@property (nonatomic, retain) IBOutlet UILabel *detailAddressLabel;
 
 @end

@@ -24,6 +24,9 @@
 		59044995146299FA00424CB1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59044971146299FA00424CB1 /* CoreData.framework */; };
 		5904499D146299FA00424CB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5904499B146299FA00424CB1 /* InfoPlist.strings */; };
 		590449A0146299FA00424CB1 /* Address_BookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5904499F146299FA00424CB1 /* Address_BookTests.m */; };
+		590449B614629D2300424CB1 /* EditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 590449B414629D2300424CB1 /* EditorViewController.m */; };
+		590449B714629D2300424CB1 /* EditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 590449B514629D2300424CB1 /* EditorViewController.xib */; };
+		59A331761462D46300DD9B58 /* Contacts.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A331751462D46300DD9B58 /* Contacts.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,24 +45,29 @@
 		5904496D146299FA00424CB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5904496F146299FA00424CB1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		59044971146299FA00424CB1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		59044975146299FA00424CB1 /* Address Book-Info.plist */ = {isa = PBXFileReference; path = "Address Book-Info.plist"; sourceTree = "<group>"; };
+		59044975146299FA00424CB1 /* Address Book-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Address Book-Info.plist"; sourceTree = "<group>"; };
 		59044977146299FA00424CB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		59044979146299FA00424CB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5904497B146299FA00424CB1 /* Address Book-Prefix.pch */ = {isa = PBXFileReference; path = "Address Book-Prefix.pch"; sourceTree = "<group>"; };
-		5904497C146299FA00424CB1 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		5904497B146299FA00424CB1 /* Address Book-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Address Book-Prefix.pch"; sourceTree = "<group>"; };
+		5904497C146299FA00424CB1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5904497D146299FA00424CB1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		59044980146299FA00424CB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		59044983146299FA00424CB1 /* Address_Book.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Address_Book.xcdatamodel; sourceTree = "<group>"; };
-		59044985146299FA00424CB1 /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		59044985146299FA00424CB1 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		59044986146299FA00424CB1 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		59044988146299FA00424CB1 /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		59044988146299FA00424CB1 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		59044989146299FA00424CB1 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		59044990146299FA00424CB1 /* Address BookTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Address BookTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59044991146299FA00424CB1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		5904499A146299FA00424CB1 /* Address BookTests-Info.plist */ = {isa = PBXFileReference; path = "Address BookTests-Info.plist"; sourceTree = "<group>"; };
+		5904499A146299FA00424CB1 /* Address BookTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Address BookTests-Info.plist"; sourceTree = "<group>"; };
 		5904499C146299FA00424CB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5904499E146299FA00424CB1 /* Address_BookTests.h */ = {isa = PBXFileReference; path = Address_BookTests.h; sourceTree = "<group>"; };
+		5904499E146299FA00424CB1 /* Address_BookTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Address_BookTests.h; sourceTree = "<group>"; };
 		5904499F146299FA00424CB1 /* Address_BookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Address_BookTests.m; sourceTree = "<group>"; };
+		590449B314629D2300424CB1 /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditorViewController.h; sourceTree = "<group>"; };
+		590449B414629D2300424CB1 /* EditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditorViewController.m; sourceTree = "<group>"; };
+		590449B514629D2300424CB1 /* EditorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditorViewController.xib; sourceTree = "<group>"; };
+		59A331741462D46300DD9B58 /* Contacts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contacts.h; sourceTree = "<group>"; };
+		59A331751462D46300DD9B58 /* Contacts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contacts.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +99,7 @@
 		5904495C146299FA00424CB1 = {
 			isa = PBXGroup;
 			children = (
+				59044A081462CA2600424CB1 /* Core Data */,
 				59044973146299FA00424CB1 /* Address Book */,
 				59044998146299FA00424CB1 /* Address BookTests */,
 				5904496A146299FA00424CB1 /* Frameworks */,
@@ -124,12 +133,12 @@
 			children = (
 				5904497C146299FA00424CB1 /* AppDelegate.h */,
 				5904497D146299FA00424CB1 /* AppDelegate.m */,
-				5904497F146299FA00424CB1 /* MainStoryboard.storyboard */,
 				59044985146299FA00424CB1 /* MasterViewController.h */,
 				59044986146299FA00424CB1 /* MasterViewController.m */,
 				59044988146299FA00424CB1 /* DetailViewController.h */,
 				59044989146299FA00424CB1 /* DetailViewController.m */,
-				59044982146299FA00424CB1 /* Address_Book.xcdatamodeld */,
+				590449B314629D2300424CB1 /* EditorViewController.h */,
+				590449B414629D2300424CB1 /* EditorViewController.m */,
 				59044974146299FA00424CB1 /* Supporting Files */,
 			);
 			path = "Address Book";
@@ -138,6 +147,8 @@
 		59044974146299FA00424CB1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5904497F146299FA00424CB1 /* MainStoryboard.storyboard */,
+				590449B514629D2300424CB1 /* EditorViewController.xib */,
 				59044975146299FA00424CB1 /* Address Book-Info.plist */,
 				59044976146299FA00424CB1 /* InfoPlist.strings */,
 				59044979146299FA00424CB1 /* main.m */,
@@ -163,6 +174,17 @@
 				5904499B146299FA00424CB1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59044A081462CA2600424CB1 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				59044982146299FA00424CB1 /* Address_Book.xcdatamodeld */,
+				59A331741462D46300DD9B58 /* Contacts.h */,
+				59A331751462D46300DD9B58 /* Contacts.m */,
+			);
+			name = "Core Data";
+			path = "Address Book";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +259,7 @@
 			files = (
 				59044978146299FA00424CB1 /* InfoPlist.strings in Resources */,
 				59044981146299FA00424CB1 /* MainStoryboard.storyboard in Resources */,
+				590449B714629D2300424CB1 /* EditorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +299,8 @@
 				59044984146299FA00424CB1 /* Address_Book.xcdatamodeld in Sources */,
 				59044987146299FA00424CB1 /* MasterViewController.m in Sources */,
 				5904498A146299FA00424CB1 /* DetailViewController.m in Sources */,
+				590449B614629D2300424CB1 /* EditorViewController.m in Sources */,
+				59A331761462D46300DD9B58 /* Contacts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +470,7 @@
 				590449A5146299FA00424CB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		590449A6146299FA00424CB1 /* Build configuration list for PBXNativeTarget "Address BookTests" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +479,7 @@
 				590449A8146299FA00424CB1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

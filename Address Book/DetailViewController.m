@@ -15,7 +15,9 @@
 @implementation DetailViewController
 
 @synthesize detailItem = _detailItem;
-@synthesize detailDescriptionLabel = _detailDescriptionLabel;
+@synthesize detailNameLabel;
+@synthesize detailPhoneLabel;
+@synthesize detailAddressLabel;
 
 #pragma mark - Managing the detail item
 
@@ -34,7 +36,10 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        self.detailNameLabel.text = [self.detailItem valueForKey:@"name"];
+        self.detailPhoneLabel.text = [self.detailItem valueForKey:@"phone"];
+        self.detailAddressLabel.text = [self.detailItem valueForKey:@"address"];
+    
     }
 }
 
