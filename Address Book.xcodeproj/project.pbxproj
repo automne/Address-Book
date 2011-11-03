@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5904496C146299FA00424CB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5904496B146299FA00424CB1 /* UIKit.framework */; };
+		5904496E146299FA00424CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5904496D146299FA00424CB1 /* Foundation.framework */; };
+		59044970146299FA00424CB1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5904496F146299FA00424CB1 /* CoreGraphics.framework */; };
+		59044972146299FA00424CB1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59044971146299FA00424CB1 /* CoreData.framework */; };
+		59044978146299FA00424CB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59044976146299FA00424CB1 /* InfoPlist.strings */; };
+		5904497A146299FA00424CB1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59044979146299FA00424CB1 /* main.m */; };
+		5904497E146299FA00424CB1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5904497D146299FA00424CB1 /* AppDelegate.m */; };
+		59044981146299FA00424CB1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5904497F146299FA00424CB1 /* MainStoryboard.storyboard */; };
+		59044984146299FA00424CB1 /* Address_Book.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59044982146299FA00424CB1 /* Address_Book.xcdatamodeld */; };
+		59044987146299FA00424CB1 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59044986146299FA00424CB1 /* MasterViewController.m */; };
+		5904498A146299FA00424CB1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59044989146299FA00424CB1 /* DetailViewController.m */; };
+		59044992146299FA00424CB1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59044991146299FA00424CB1 /* SenTestingKit.framework */; };
+		59044993146299FA00424CB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5904496B146299FA00424CB1 /* UIKit.framework */; };
+		59044994146299FA00424CB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5904496D146299FA00424CB1 /* Foundation.framework */; };
+		59044995146299FA00424CB1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59044971146299FA00424CB1 /* CoreData.framework */; };
+		5904499D146299FA00424CB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5904499B146299FA00424CB1 /* InfoPlist.strings */; };
+		590449A0146299FA00424CB1 /* Address_BookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5904499F146299FA00424CB1 /* Address_BookTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59044996146299FA00424CB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5904495E146299FA00424CB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 59044966146299FA00424CB1;
+			remoteInfo = "Address Book";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		59044967146299FA00424CB1 /* Address Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Address Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5904496B146299FA00424CB1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5904496D146299FA00424CB1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5904496F146299FA00424CB1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		59044971146299FA00424CB1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		59044975146299FA00424CB1 /* Address Book-Info.plist */ = {isa = PBXFileReference; path = "Address Book-Info.plist"; sourceTree = "<group>"; };
+		59044977146299FA00424CB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		59044979146299FA00424CB1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5904497B146299FA00424CB1 /* Address Book-Prefix.pch */ = {isa = PBXFileReference; path = "Address Book-Prefix.pch"; sourceTree = "<group>"; };
+		5904497C146299FA00424CB1 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		5904497D146299FA00424CB1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		59044980146299FA00424CB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		59044983146299FA00424CB1 /* Address_Book.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Address_Book.xcdatamodel; sourceTree = "<group>"; };
+		59044985146299FA00424CB1 /* MasterViewController.h */ = {isa = PBXFileReference; path = MasterViewController.h; sourceTree = "<group>"; };
+		59044986146299FA00424CB1 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		59044988146299FA00424CB1 /* DetailViewController.h */ = {isa = PBXFileReference; path = DetailViewController.h; sourceTree = "<group>"; };
+		59044989146299FA00424CB1 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		59044990146299FA00424CB1 /* Address BookTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Address BookTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59044991146299FA00424CB1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		5904499A146299FA00424CB1 /* Address BookTests-Info.plist */ = {isa = PBXFileReference; path = "Address BookTests-Info.plist"; sourceTree = "<group>"; };
+		5904499C146299FA00424CB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5904499E146299FA00424CB1 /* Address_BookTests.h */ = {isa = PBXFileReference; path = Address_BookTests.h; sourceTree = "<group>"; };
+		5904499F146299FA00424CB1 /* Address_BookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Address_BookTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59044964146299FA00424CB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5904496C146299FA00424CB1 /* UIKit.framework in Frameworks */,
+				5904496E146299FA00424CB1 /* Foundation.framework in Frameworks */,
+				59044970146299FA00424CB1 /* CoreGraphics.framework in Frameworks */,
+				59044972146299FA00424CB1 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5904498C146299FA00424CB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59044992146299FA00424CB1 /* SenTestingKit.framework in Frameworks */,
+				59044993146299FA00424CB1 /* UIKit.framework in Frameworks */,
+				59044994146299FA00424CB1 /* Foundation.framework in Frameworks */,
+				59044995146299FA00424CB1 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5904495C146299FA00424CB1 = {
+			isa = PBXGroup;
+			children = (
+				59044973146299FA00424CB1 /* Address Book */,
+				59044998146299FA00424CB1 /* Address BookTests */,
+				5904496A146299FA00424CB1 /* Frameworks */,
+				59044968146299FA00424CB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		59044968146299FA00424CB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				59044967146299FA00424CB1 /* Address Book.app */,
+				59044990146299FA00424CB1 /* Address BookTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5904496A146299FA00424CB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5904496B146299FA00424CB1 /* UIKit.framework */,
+				5904496D146299FA00424CB1 /* Foundation.framework */,
+				5904496F146299FA00424CB1 /* CoreGraphics.framework */,
+				59044971146299FA00424CB1 /* CoreData.framework */,
+				59044991146299FA00424CB1 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59044973146299FA00424CB1 /* Address Book */ = {
+			isa = PBXGroup;
+			children = (
+				5904497C146299FA00424CB1 /* AppDelegate.h */,
+				5904497D146299FA00424CB1 /* AppDelegate.m */,
+				5904497F146299FA00424CB1 /* MainStoryboard.storyboard */,
+				59044985146299FA00424CB1 /* MasterViewController.h */,
+				59044986146299FA00424CB1 /* MasterViewController.m */,
+				59044988146299FA00424CB1 /* DetailViewController.h */,
+				59044989146299FA00424CB1 /* DetailViewController.m */,
+				59044982146299FA00424CB1 /* Address_Book.xcdatamodeld */,
+				59044974146299FA00424CB1 /* Supporting Files */,
+			);
+			path = "Address Book";
+			sourceTree = "<group>";
+		};
+		59044974146299FA00424CB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				59044975146299FA00424CB1 /* Address Book-Info.plist */,
+				59044976146299FA00424CB1 /* InfoPlist.strings */,
+				59044979146299FA00424CB1 /* main.m */,
+				5904497B146299FA00424CB1 /* Address Book-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59044998146299FA00424CB1 /* Address BookTests */ = {
+			isa = PBXGroup;
+			children = (
+				5904499E146299FA00424CB1 /* Address_BookTests.h */,
+				5904499F146299FA00424CB1 /* Address_BookTests.m */,
+				59044999146299FA00424CB1 /* Supporting Files */,
+			);
+			path = "Address BookTests";
+			sourceTree = "<group>";
+		};
+		59044999146299FA00424CB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5904499A146299FA00424CB1 /* Address BookTests-Info.plist */,
+				5904499B146299FA00424CB1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59044966146299FA00424CB1 /* Address Book */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 590449A3146299FA00424CB1 /* Build configuration list for PBXNativeTarget "Address Book" */;
+			buildPhases = (
+				59044963146299FA00424CB1 /* Sources */,
+				59044964146299FA00424CB1 /* Frameworks */,
+				59044965146299FA00424CB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Address Book";
+			productName = "Address Book";
+			productReference = 59044967146299FA00424CB1 /* Address Book.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5904498F146299FA00424CB1 /* Address BookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 590449A6146299FA00424CB1 /* Build configuration list for PBXNativeTarget "Address BookTests" */;
+			buildPhases = (
+				5904498B146299FA00424CB1 /* Sources */,
+				5904498C146299FA00424CB1 /* Frameworks */,
+				5904498D146299FA00424CB1 /* Resources */,
+				5904498E146299FA00424CB1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59044997146299FA00424CB1 /* PBXTargetDependency */,
+			);
+			name = "Address BookTests";
+			productName = "Address BookTests";
+			productReference = 59044990146299FA00424CB1 /* Address BookTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5904495E146299FA00424CB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 59044961146299FA00424CB1 /* Build configuration list for PBXProject "Address Book" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5904495C146299FA00424CB1;
+			productRefGroup = 59044968146299FA00424CB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59044966146299FA00424CB1 /* Address Book */,
+				5904498F146299FA00424CB1 /* Address BookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		59044965146299FA00424CB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59044978146299FA00424CB1 /* InfoPlist.strings in Resources */,
+				59044981146299FA00424CB1 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5904498D146299FA00424CB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5904499D146299FA00424CB1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5904498E146299FA00424CB1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		59044963146299FA00424CB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5904497A146299FA00424CB1 /* main.m in Sources */,
+				5904497E146299FA00424CB1 /* AppDelegate.m in Sources */,
+				59044984146299FA00424CB1 /* Address_Book.xcdatamodeld in Sources */,
+				59044987146299FA00424CB1 /* MasterViewController.m in Sources */,
+				5904498A146299FA00424CB1 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5904498B146299FA00424CB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				590449A0146299FA00424CB1 /* Address_BookTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		59044997146299FA00424CB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 59044966146299FA00424CB1 /* Address Book */;
+			targetProxy = 59044996146299FA00424CB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		59044976146299FA00424CB1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59044977146299FA00424CB1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5904497F146299FA00424CB1 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59044980146299FA00424CB1 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		5904499B146299FA00424CB1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5904499C146299FA00424CB1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		590449A1146299FA00424CB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		590449A2146299FA00424CB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		590449A4146299FA00424CB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Address Book/Address Book-Prefix.pch";
+				INFOPLIST_FILE = "Address Book/Address Book-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		590449A5146299FA00424CB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Address Book/Address Book-Prefix.pch";
+				INFOPLIST_FILE = "Address Book/Address Book-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		590449A7146299FA00424CB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Address Book.app/Address Book";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Address Book/Address Book-Prefix.pch";
+				INFOPLIST_FILE = "Address BookTests/Address BookTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		590449A8146299FA00424CB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Address Book.app/Address Book";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Address Book/Address Book-Prefix.pch";
+				INFOPLIST_FILE = "Address BookTests/Address BookTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		59044961146299FA00424CB1 /* Build configuration list for PBXProject "Address Book" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				590449A1146299FA00424CB1 /* Debug */,
+				590449A2146299FA00424CB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		590449A3146299FA00424CB1 /* Build configuration list for PBXNativeTarget "Address Book" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				590449A4146299FA00424CB1 /* Debug */,
+				590449A5146299FA00424CB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		590449A6146299FA00424CB1 /* Build configuration list for PBXNativeTarget "Address BookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				590449A7146299FA00424CB1 /* Debug */,
+				590449A8146299FA00424CB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		59044982146299FA00424CB1 /* Address_Book.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				59044983146299FA00424CB1 /* Address_Book.xcdatamodel */,
+			);
+			currentVersion = 59044983146299FA00424CB1 /* Address_Book.xcdatamodel */;
+			path = Address_Book.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5904495E146299FA00424CB1 /* Project object */;
+}
