@@ -2,8 +2,8 @@
 //  DetailViewController.m
 //  Address Book
 //
-//  Created by Chen-Yu Hsu on 11/3/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Automne on 11/3/11.
+//  Copyright (c) 2011 Automne. All rights reserved.
 //
 
 #import "DetailViewController.h"
@@ -31,22 +31,99 @@
     }
 }
 
+
+/**
+ *   Update Basic view for init stat.
+ */
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-
     if (self.detailItem) {
+        
         self.detailNameLabel.text = [self.detailItem valueForKey:@"name"];
-        self.detailPhoneLabel.text = [self.detailItem valueForKey:@"phone"];
+        self.detailPhoneLabel.text = [self.detailItem valueForKey:@"phoneNumber"];
         self.detailAddressLabel.text = [self.detailItem valueForKey:@"address"];
-    
+        
+        [self.detailNameLabel setEnabled:NO];
+        [self.detailPhoneLabel setEnabled:NO];
+        [self.detailAddressLabel setEnabled:NO];
+        
+        self.title = [self.detailItem valueForKey:@"name"];        
+        
+        [self setBarButton:0];
+        
     }
+}
+
+
+/**
+ *   Set view for editing.
+ */
+-(void) editInfo
+{
+    [self.detailNameLabel setBorderStyle:UITextBorderStyleRoundedRect];
+    [self.detailPhoneLabel setBorderStyle:UITextBorderStyleRoundedRect];
+    [self.detailAddressLabel setBorderStyle:UITextBorderStyleRoundedRect];
+    
+    [self.detailNameLabel setEnabled:YES];
+    [self.detailPhoneLabel setEnabled:YES];
+    [self.detailAddressLabel setEnabled:YES];
+    
+    [self setBarButton:1];
+    
+}
+
+
+/**
+ *
+ *  Save Information that user inputs. 
+ *  Then, update the view.
+ */
+-(void) saveInfo
+{
+    [self.detailNameLabel setBorderStyle:UITextBorderStyleNone];
+    [self.detailPhoneLabel setBorderStyle:UITextBorderStyleNone];
+    [self.detailAddressLabel setBorderStyle:UITextBorderStyleNone];
+    
+    [self.detailNameLabel setEnabled:NO];
+    [self.detailPhoneLabel setEnabled:NO];
+    [self.detailAddressLabel setEnabled:NO];
+    
+    [self.detailItem setValue:self.detailNameLabel.text forKey:@"name"];
+    [self.detailItem setValue:self.detailPhoneLabel.text forKey:@"phoneNumber"];
+    [self.detailItem setValue:self.detailAddressLabel.text forKey:@"address"];
+    
+    [self configureView];
+}
+
+
+/**
+ * @param
+ *    mode = 0 -> set editButton to Edit Button
+ *    mode = 1 -> set editButton to Done Button
+ */
+-(void) setBarButton:(int)mode
+{
+    if(mode==0){
+        editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit" style:UIBarButtonItemStylePlain  target:self action:@selector(editInfo)];
+        self.navigationItem.rightBarButtonItem = editButton;
+    }else{
+        editButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone  target:self action:@selector(saveInfo)];
+        self.navigationItem.rightBarButtonItem = editButton;
+    }
+}
+
+
+/**
+ *  Hide Keyboard when "Return" is pressed.
+ */
+- (IBAction) textFieldReturn:(id)sender
+{
+	[sender resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -54,15 +131,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated

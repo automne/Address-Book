@@ -2,13 +2,13 @@
 //  MasterViewController.m
 //  Address Book
 //
-//  Created by Chen-Yu Hsu on 11/3/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Automne on 11/3/11.
+//  Copyright (c) 2011 Automne. All rights reserved.
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
+
 
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -18,6 +18,8 @@
 
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
+@synthesize searchDisplayController = __searchDisplayController;
+@synthesize searchBar;
 
 - (void)awakeFromNib
 {
@@ -43,13 +45,13 @@
     self.navigationItem.rightBarButtonItem = addButton;
     
     editorView=[[EditorViewController alloc] init];
+    CGPoint offset= {0, 44};
+    [self.tableView setContentOffset:offset];
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -100,14 +102,6 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -119,22 +113,19 @@
         // Save the context.
         NSError *error = nil;
         if (![context save:&error]) {
-            /*
-             Replace this implementation with code to handle the error appropriately.
-             
-             abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-             */
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
     }   
 }
 
+
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // The table view should not be re-orderable.
     return NO;
 }
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -144,6 +135,7 @@
         [[segue destinationViewController] setDetailItem:selectedObject];
     }
 }
+
 
 #pragma mark - Fetched results controller
 
@@ -171,17 +163,12 @@
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Address Book"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     
 	NSError *error = nil;
 	if (![self.fetchedResultsController performFetch:&error]) {
-	    /*
-	     Replace this implementation with code to handle the error appropriately.
-
-	     abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-	     */
 	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 	    abort();
 	}
@@ -189,10 +176,12 @@
     return __fetchedResultsController;
 }    
 
+
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView beginUpdates];
 }
+
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
            atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
@@ -207,6 +196,7 @@
             break;
     }
 }
+
 
 - (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
        atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
@@ -234,44 +224,45 @@
     }
 }
 
+
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView endUpdates];
 }
 
-/*
-// Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed. 
- 
- - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
-{
-    // In the simplest, most efficient, case, reload the table view.
-    [self.tableView reloadData];
-}
- */
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = [[managedObject valueForKey:@"name"] description];
+    cell.detailTextLabel.text = [[managedObject valueForKey:@"phoneNumber"] description]; 
 }
+
 
 - (void)insertNewObject
 {
+    //Configure view position;
+    CGPoint offset= {0, 0};
+    [self.tableView setContentOffset:offset];
     
+    //Add new view
     [UIView beginAnimations:nil context:nil];
     [UIView setAnimationDuration:0.75];
     [UIView setAnimationDelegate:self];
-    [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.view cache:YES];
+    [UIView setAnimationTransition:UIViewAnimationTransitionCurlDown forView:self.view cache:YES];
     [self.view addSubview:editorView.view];
     [UIView commitAnimations];
+    
     self.navigationItem.rightBarButtonItem=NULL;
     self.navigationItem.leftBarButtonItem =NULL;
     
-    [NSThread sleepForTimeInterval:0.75];
+    [NSThread sleepForTimeInterval:0.5];
+    
     UIBarButtonItem *done=[[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:@selector(saveInfo)];
     self.navigationItem.leftBarButtonItem=done;
     
 }
+
 
 -(void)saveInfo
 {
@@ -284,30 +275,92 @@
     // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
     
     NSString *nameString=[NSString stringWithFormat:@"%@", [editorView name].text];
-    NSString *phoneString=[NSString stringWithFormat:@"%@", [editorView name].text];
-    NSString *addressString=[NSString stringWithFormat:@"%@", [editorView name].text];
+    NSString *phoneString=[NSString stringWithFormat:@"%@", [editorView phone].text];
+    NSString *addressString=[NSString stringWithFormat:@"%@", [editorView address].text];
     
     [newManagedObject setValue:nameString forKey:@"name"];
-    [newManagedObject setValue:phoneString forKey:@"phone"];
+    [newManagedObject setValue:phoneString forKey:@"phoneNumber"];
     [newManagedObject setValue:addressString forKey:@"address"];
+    
     
     // Save the context.
     NSError *error = nil;
     if (![context save:&error]) {
-        /*
-         Replace this implementation with code to handle the error appropriately.
-         
-         abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-         */
+        
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
+    
     }
+    
+    //View animation
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.75];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationTransition:UIViewAnimationTransitionCurlUp forView:self.view cache:YES];
     [editorView.view removeFromSuperview];
+    [UIView commitAnimations];
+    
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
     editorView=[[EditorViewController alloc] init];
+}
+
+
+- (void)searchBar:(UISearchBar *)theSearchBar textDidChange:(NSString *)searchText
+{
+    if(searchText.length>0){
+        
+        if([searchText rangeOfString:@"0"].length>0){
+            
+            NSPredicate *predicate=[NSPredicate predicateWithFormat:@"phoneNumber CONTAINS[cd] %@", searchText];
+            [self.fetchedResultsController.fetchRequest setPredicate:predicate];
+        
+        }else{
+            
+            NSPredicate *predicate=[NSPredicate predicateWithFormat:@"name CONTAINS[cd] %@", searchText];
+            [self.fetchedResultsController.fetchRequest setPredicate:predicate];
+        
+        }
+        
+    }else{
+        
+        NSPredicate *predicate=[NSPredicate predicateWithFormat:@"1=1"];
+        [self.fetchedResultsController.fetchRequest setPredicate:predicate];
+    
+    }
+    
+    NSError *error = nil;
+	if (![self.fetchedResultsController performFetch:&error]) {
+	    
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+	    abort();
+	
+    }
+    
+    [self.tableView reloadData];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)theSearchBar
+{
+    [theSearchBar resignFirstResponder];
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)theSearchBar 
+{
+    theSearchBar.showsCancelButton=YES;
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)theSearchBar
+{
+    theSearchBar.showsCancelButton=NO;
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *)theSearchBar
+{
+    [theSearchBar resignFirstResponder];
+    
 }
 
 @end

@@ -2,8 +2,8 @@
 //  MasterViewController.h
 //  Address Book
 //
-//  Created by Chen-Yu Hsu on 11/3/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Automne on 11/3/11.
+//  Copyright (c) 2011 Automne. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -14,8 +14,14 @@
 @interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 {
     EditorViewController *editorView;
+    IBOutlet UISearchBar *searchBar;
+    NSFetchedResultsController *fetchedResultsController;
 }
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic) UISearchDisplayController *searchDisplayController;
+@property (nonatomic, retain) IBOutlet UISearchBar *searchBar;
+
+
 -(void)saveInfo;
 @end

@@ -3,7 +3,7 @@
     <entity name="Contacts" representedClassName="Contacts">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Contacts" positionX="261" positionY="189" width="128" height="90"/>

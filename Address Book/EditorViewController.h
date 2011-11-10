@@ -2,17 +2,18 @@
 //  EditorViewController.h
 //  Address Book
 //
-//  Created by Chen-Yu Hsu on 11/3/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Automne on 11/3/11.
+//  Copyright (c) 2011 Automne. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface EditorViewController : UIViewController
 {
-    IBOutlet UITextField *name;
-    IBOutlet UITextField *phone;
-    IBOutlet UITextField *address;
+    @public
+        IBOutlet UITextField *name;
+        IBOutlet UITextField *phone;
+        IBOutlet UITextField *address;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField *name;

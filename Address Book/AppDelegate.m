@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  Address Book
 //
-//  Created by Chen-Yu Hsu on 11/3/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Automne on 11/3/11.
+//  Copyright (c) 2011 Automne. All rights reserved.
 //
 
 #import "AppDelegate.h"
